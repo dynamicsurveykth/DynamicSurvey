@@ -3,7 +3,7 @@ require 'json'
 require 'httparty'
 require 'date'
 
-$with_contraints=true           # determine the course/program file to be read
+$with_contraints=true
 
 
 # get configuration data
@@ -70,9 +70,7 @@ relevant_courses_English=all_data['relevant_courses_English']
 relevant_courses_Swedish=all_data['relevant_courses_Swedish']
 if $with_contraints
   $PF_course_codes_by_program=all_data['PF_course_codes_by_program']
-  #puts("$PF_course_codes_by_program is #{$PF_course_codes_by_program}")
   $AF_course_codes_by_program=all_data['AF_course_codes_by_program']
-  #puts("$AF_course_codes_by_program is #{$AF_course_codes_by_program}")
 end
 
 get '/testPrograms' do
@@ -81,7 +79,6 @@ get '/testPrograms' do
   program_codes=[]
   @programs=$programs_in_the_school_with_titles.sort #this is a hash
   puts("@programs is #{@programs}")
-  # note that each "program" value is of the form ["CDATE", {"owner"=>"EECS", "title_en"=>"Degree Programme in Computer Science and Engineering", "title_sv"=>"Civilingenjörsutbildning i datateknik"}]
 
   @programs.each do |program|
     #puts("program is #{program}")
@@ -174,13 +171,12 @@ get '/getGeneralData' do
         puts("/getGeneralData: @program_code is #{@program_code}")
         planned_start_today=Time.new
         planned_start_min=planned_start_today
-        planned_start_max=planned_start_today + (11*30*24*60*60) # 11 months into the future
+        planned_start_max=planned_start_today + (11*30*24*60*60)
 
         #puts("#{$programs_in_the_school_with_titles}")
         #puts("#{$programs_in_the_school_with_titles[@program_code]}")
         #puts("#{$programs_in_the_school_with_titles[@program_code]['title_en']}")
 
-        # all TIVNM students can only take a degree project course with an A-F grade
         if %w(TIVNM ).include? @program_code 
           @graded_or_ungraded_question='<p><span lan="en">All students in ' + @program_code + ' must have A-F grading.</span>/<span lan="sv">Alla elever i ' + @program_code + ' måste ha A-F-gradering.</p>'
         else
@@ -196,8 +192,6 @@ get '/getGeneralData' do
            </span>'
         end
 
-        
-	# now render a simple form the user will submit to "take the quiz"
         <<-HTML
           <html>
           <head><title>Dynamic survey for replacing UT-EXAR form</title></head>
