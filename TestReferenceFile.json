@@ -1,0 +1,60 @@
+{  "cycle_number": "2", 
+   "school_acronym": "EECS", 
+   "programs_in_the_school_with_titles": 
+   {
+    "P1": {"owner": "EECS", "title_en": "Degree Programme P1", "title_sv": "Civilingenj\u00f6rsutbildning P1", "credits": "180"},
+    "P2": {"owner": "EECS", "title_en": "Degree Programme P2", "title_sv": "Civilingenj\u00f6rsutbildning P2", "credits": "300"},
+	"P3": {"owner": "EECS", "title_en": "Degree Programme P3", "title_sv": "Civilingenj\u00f6rsutbildning P3", "credits": "180"},
+	"P4": {"owner": "EECS", "title_en": "Degree Programme P4", "title_sv": "Civilingenj\u00f6rsutbildning P4", "credits": "300"},
+	"P5": {"owner": "EECS", "title_en": "Degree Programme P5", "title_sv": "Civilingenj\u00f6rsutbildning P5", "credits": "300"}
+   },
+   "AF_course_codes_by_program":
+   {
+    "cycle2": 
+	 {
+	  "P1": ["C1", "C2"], 
+	  "P2": ["C3", "C4"],
+	  "P3": ["C5", "C6"], 
+	  "P4": ["C7", "C8"],
+	  "P5": ["C9", "C10"]
+	 }
+   },
+   "PF_course_codes_by_program":
+   {
+    "cycle2": 
+	 {
+	  "P1": ["C11", "C12"], 
+	  "P2": ["C13", "C14"],
+	  "P3": ["C15", "C16"], 
+	  "P4": ["C17", "C18"],
+	  "P5": ["C19"]
+	 }
+   },
+   "AF_courses": ["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10"],
+   "PF_courses": ["C11","C12","C13","C14","C15","C16","C17","C18","C19","C20"],
+   "all_course_examiners": 
+   {
+    "C1": ["EX1", "EX2"],
+	"C2": ["EX1", "EX2", "EX4"],
+	"C3": ["EX1", "EX2", "EX3"],
+	"C4": ["EX2", "EX5"],
+	"C5": ["EX1", "EX2", "EX7", "EX8"],
+	"C6": ["EX1", "EX2", "EX3"],
+	"C7": ["EX1", "EX2"],
+	"C8": ["EX1", "EX2"],
+	"C9": ["EX1", "EX2"],
+	"C10": ["EX1", "EX2"],
+	"C11": ["EX1", "EX2"],
+	"C12": ["EX4", "EX5", "EX6"],
+	"C13": ["EX1", "EX2"],
+	"C14": ["EX1", "EX2"],
+	"C15": ["EX1", "EX2"],
+	"C16": ["EX1", "EX2"],
+	"C17": ["EX6", "EX7", "EX8", "EX9", "EX10"],
+	"C18": ["EX1", "EX2"],
+	"C19": ["EX1", "EX2", "EX4"],
+	"C20": ["EX1", "EX2"]
+   }
+}
+	
+   
