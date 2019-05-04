@@ -595,15 +595,20 @@ get '/testExaminers' do
 
 @potential_examiners=all_course_examiners["DA224X"].sort
 
+selectedCourse = "DA224X"
+Examiner_A = "Anders Lansner"
+Examiner_B = "Johan Hoffman"
+
+@potential_examiners=all_course_examiners[selectedCourse].sort
+
 puts("Class of potential_examiners: #{@potential_examiners.class}")
 
-	if @potential_examiners[0] == "Anders Lansner"
+	if @potential_examiners[0] == Examiner_A
 		puts("pass")
 	end
-	if @potential_examiners[10] == "Johan Hoffman"
+	if @potential_examiners[10] == Examiner_B
 		puts("pass")
 	end
-
 end
 
 get '/CourseProgramStatistics' do
