@@ -571,7 +571,7 @@ post "/testGeneralData" do
 
 end
 
-get '/testCINTEcourses' do
+get '/testCourses' do
 
   cycle_code='cycle'+"2"
   programToTest = "CINTE"
@@ -591,7 +591,7 @@ get '/testCINTEcourses' do
   #TEST END
 end
 
-get '/testDA224X_Examiners' do
+get '/testExaminers' do
 
 @potential_examiners=all_course_examiners["DA224X"].sort
 
